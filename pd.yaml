@@ -2,7 +2,7 @@ id: parameter-discovery
 
 info:
   name: Headless Parameter Discovery
-  author: Amir
+  author: Mohsen
   severity: info
   description: Takes parameters fuzz for the reflection
   tags: headless
@@ -41,3 +41,12 @@ http:
         words:
           - "'minj''"
         part: body
+    actions:
+      - name: Make Curl Request
+        type: webhook
+        hook-config:
+          method: POST
+          url: "https://discord.com/api/webhooks/1137363398544347206/_6s7mlGykssqUf5oToiKY1eAav8WpV1KQNTyvrxpB36JGTTnVd6kfAJo-xzI24veDI_C"
+          headers:
+            - "Content-Type: application/json"
+          body: {"username": "Nuclei_Reflection_Finder","content": "{{BaseURL}}"}

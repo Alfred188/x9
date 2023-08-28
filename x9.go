@@ -88,6 +88,10 @@ func main() {
 		index++
 	}
 
+	if !Silent {
+		logo()
+	}
+
 	if Url != "" {
 		// url mode
 		Prosess(Url)
@@ -100,22 +104,18 @@ func main() {
 		fmt.Println("No url or url list provided")
 	}
 
-	if !Silent {
-		logo()
-	}
-
 	Out()
 }
 
 func logo() {
-	fmt.Println("         ________")
-	fmt.Println("___  ___/   __   \\")
-	fmt.Println("\\  \\/  /\\____    /")
-	fmt.Println(" >    <    /    / ")
-	fmt.Println("/__/\\__\\  /____/  ")
-	fmt.Println("               ")
-	fmt.Println(" v1.0.0 ")
-	fmt.Println("Author: Alfred(MJ)")
+	fmt.Println("	         ________")
+	fmt.Println("	___  ___/   __   \\")
+	fmt.Println("	\\  \\/  /\\____    /")
+	fmt.Println("	 >    <    /    / ")
+	fmt.Println("	/__/\\__\\  /____/  ")
+	fmt.Println("	               ")
+	fmt.Println("	v1.0.0 ")
+	fmt.Println("Author: Alfred(MJ) _ Hades Team")
 	fmt.Println("E-Mail: Mohsen.Mahmoudjanlou@gmail.com")
 	fmt.Println("Starting to process ... ")
 }

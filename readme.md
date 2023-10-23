@@ -7,7 +7,9 @@
 This app will create new links by adding your injection to it.
 
 Sample Use:
-```ls *.x9 | while read file; do x9 -ul $file -c 40 -v "<b/minj,'minj'" -gs all -vs suffix -w ~/wordlist/top25  | nuclei -t ~/nuclei-custom-template/Reflection_discovery.yaml  -silent ; done > output
+```
+ls *.x9 | while read file; do x9 -ul $file -c 40 -v "<b/minj,'minj'" -gs all -vs suffix -w ~/wordlist/top25  | nuclei -t ~/nuclei-custom-template/Reflection_discovery.yaml  -silent ; done > output
+
 ```
 
 Sample Nuclei code:
